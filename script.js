@@ -49,6 +49,7 @@ function swipeRight() {
             audioSource.src = cards[nextIndex].audio + ".mp3";
             audio.load(); // reloads the new source
         } else {
+            document.getElementById('playPause').disabled = true;
             document.getElementById('yes').classList.add('hidden');
             document.getElementById('no').classList.add('hidden');
             confetti();
@@ -103,6 +104,7 @@ function swipeLeft() {
             audioSource.src = cards[nextIndex].audio + ".mp3";
             audio.load(); // reloads the new source
         } else {
+            document.getElementById('playPause').disabled = true;
             document.getElementById('yes').classList.add('hidden');
             document.getElementById('no').classList.add('hidden');
             confetti();
