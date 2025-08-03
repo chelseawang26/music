@@ -42,10 +42,11 @@ function swipeRight() {
                 document.getElementById('pause').classList.add('hidden');
                 document.getElementById('play').classList.remove('hidden');
             }
-            console.log("hello");
             document.getElementById(cards[index + 1].id).classList.remove('hidden');    
             document.getElementById(cards[nextIndex].id).classList.remove('hidden');
-            audioSource.src = cards[nextIndex].audio + ".mp3";
+            audio.pause();
+            audio.currentTime = 0;
+            audioSource.src = "./docs/assets/" + cards[nextIndex].audio + ".mp3";
             audio.load();
         } else {
             document.getElementById('playPause').disabled = true;
@@ -56,6 +57,13 @@ function swipeRight() {
             for (let genre of Object.keys(genreCounts)) {
                 if (genreCounts[genre] === 2) {
                     bestSongs.push(genre);
+                }
+            }
+            if (bestSongs.length === 0) {
+                for (let genre of Object.keys(genreCounts)) {
+                    if (genreCounts[genre] === 1) {
+                        bestSongs.push(genre);
+                    }
                 }
             }
             if (bestSongs.length > 1) {
@@ -93,8 +101,10 @@ function swipeLeft() {
             }
             document.getElementById(cards[index + 1].id).classList.remove('hidden');    
             document.getElementById(cards[nextIndex].id).classList.remove('hidden');
-            audioSource.src = cards[nextIndex].audio + ".mp3";
-            audio.load(); // reloads the new source
+            audio.pause();
+            audio.currentTime = 0;
+            audioSource.src = "./docs/assets/" + cards[nextIndex].audio + ".mp3";
+            audio.load();
         } else {
             document.getElementById('playPause').disabled = true;
             document.getElementById('yes').classList.add('hidden');
@@ -104,6 +114,13 @@ function swipeLeft() {
             for (let genre of Object.keys(genreCounts)) {
                 if (genreCounts[genre] === 2) {
                     bestSongs.push(genre);
+                }
+            }
+            if (bestSongs.length === 0) {
+                for (let genre of Object.keys(genreCounts)) {
+                    if (genreCounts[genre] === 1) {
+                        bestSongs.push(genre);
+                    }
                 }
             }
             if (bestSongs.length > 1) {
