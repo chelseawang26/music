@@ -85,7 +85,7 @@ body {
     background-color: none;
     position: absolute;
     top: 505px;
-    left: 651px;
+    left: 645px;
     width: 150px;
     height: 150px;
 }
@@ -105,3 +105,4 @@ body {
 .hidden {
     display: none;
 }
+
