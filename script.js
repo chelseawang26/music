@@ -21,7 +21,8 @@ const cards = [
 const audio = document.getElementById("myAudio");
 const audioSource = document.getElementById("audioSource")
 function swipeRight() {
-    const moved = false;
+    document.getElementById(cards[index].id).classList.add('right');
+    var moved = false;
     if (!audio.paused) {
         audio.pause();
         document.getElementById('pause').classList.add('right');
@@ -29,7 +30,6 @@ function swipeRight() {
         document.getElementById('play').classList.add('right');
         moved = true;
     }
-    document.getElementById(cards[index].id).classList.add('right');
     genreCounts[cards[index].genre]++;
     const nextIndex = index + 1;
     setTimeout(() => {
@@ -43,6 +43,7 @@ function swipeRight() {
                 document.getElementById('pause').classList.add('hidden');
                 document.getElementById('play').classList.remove('hidden');
             }
+            console.log("hello");
             document.getElementById(cards[index + 1].id).classList.remove('hidden');    
             document.getElementById(cards[nextIndex].id).classList.remove('hidden');
             audioSource.src = cards[nextIndex].audio + ".mp3";
@@ -76,7 +77,8 @@ function getTopGenresWithTies(genreCounts) {
 }
 
 function swipeLeft() {
-    const moved = false;
+    document.getElementById(cards[index].id).classList.add('left');
+    var moved = false;
     if (!audio.paused) {
         audio.pause();
         document.getElementById('pause').classList.add('left');
@@ -84,7 +86,6 @@ function swipeLeft() {
         document.getElementById('play').classList.add('left');
         moved = true;
     }
-    document.getElementById(cards[index].id).classList.add('left');
     const nextIndex = index + 1;
     setTimeout(() => {
         if (nextIndex < cards.length) {

@@ -1,5 +1,5 @@
 body {
-    background-image: url("background pic.PNG");
+    background-image: url("./docs/assets/background pic.PNG");
     background-size: cover;        /* fills entire screen */
     background-position: center;   /* centers the image */
     background-repeat: no-repeat;  /* prevents tiling */
