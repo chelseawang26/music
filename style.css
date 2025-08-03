@@ -6,6 +6,18 @@ body {
     height: 100vh;                 /* makes body fill full viewport height */
     margin: 0;
 }
+.logo {
+    position: absolute;
+    width: 500px;
+    height: 250px;
+    top: 1px;
+    left: 590px;
+}
+.logo img {
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+}
 .image-container {
     display: block;
     margin-left: auto;
