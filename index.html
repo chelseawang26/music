@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Music App</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class = "image-container">
+        <img id = "blinding" src = "blinding lights the weeknd.PNG"/>
+        <img id = "wanna" class = "hidden" src = "do i wanna know.PNG"/>
+        <img id = "die" class = "hidden" src = "die w a smile.PNG"/>
+        <img id = "luther" class = "hidden" src = "luther.PNG"/>
+        <img id = "paint" class = "hidden" src = "paint the town red.PNG">
+        <img id = "snooze" class = "hidden" src = "snooze.PNG">
+        <img id = "sweater" class = "hidden" src = "sweater weather.PNG">
+        <img id = "rockstar" class = "hidden" src = "rockstar.PNG">
+        <img id = "pop" class = "hidden" src = "pop.PNG">
+        <img id = "rock" class = "hidden" src = "rock.PNG">
+        <img id = "r_and_b" class = "hidden" src = "r&b.PNG">
+        <img id = "hiphop" class = "hidden" src = "rap.PNG">
+    </div>
+
+    <div class = "playButton">
+        <audio id = "myAudio"> 
+            <source id = "audioSource" src = "blinding lights music.mp3" type = "audio/mpeg">
+            <source src = "do i wanna know music.mp3" type = "audio/mpeg">
+            <source src = "die w a smile music.mp3" type = "audio/mpeg">
+            <source src = "luther music.mp3" type = "audio/mpeg">
+            <source src = "paint the town red music.mp3" type = "audio/mpeg">
+            <source src = "snooze music.mp3" type = "audio/mpeg">
+            <source src = "sweater weather music.mp3" type = "audio/mpeg">
+            <source src = "rockstar music.mp3" type = "audio/mpeg">
+        </audio>
+        <button onclick="toggleAudio()">
+            <img id = "play" src = "play.PNG">
+            <img class = "hidden" id = "pause" src = "pause.PNG">
+        </button>
+    </div>
+    <div class = "button-container">
+        <button id = "yes" onclick="swipeRight()">
+            <img src = "yes button.png">
+        </button>
+        <button class = "hidden" id = "right" onclick="nextCardR()">
+            <img src = "right button.PNG">
+        </button>
+    </div>
+    <div class = "button-container-left">
+        <button id = "no" onclick="swipeLeft()">
+            <img src = "no button.png">
+        </button>
+        <button class = "hidden" id = "left" onclick="nextCardL()">
+            <img src = "left button.png">
+        </button>
+    </div>
+    
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</body>
+</html>
