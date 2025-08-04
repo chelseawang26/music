@@ -68,7 +68,6 @@ function swipeRight() {
             }
             if (bestSongs.length > 1) {
                 document.getElementById('right').classList.remove('hidden');
-                document.getElementById('left').classList.remove('hidden');
             }
             document.getElementById(bestSongs[bestSongsIndex]).classList.remove('hidden');
         }
@@ -125,7 +124,6 @@ function swipeLeft() {
             }
             if (bestSongs.length > 1) {
                 document.getElementById('right').classList.remove('hidden');
-                document.getElementById('left').classList.remove('hidden');
             }
             document.getElementById(bestSongs[bestSongsIndex]).classList.remove('hidden');
         }
@@ -159,8 +157,8 @@ function toggleAudio() {
     }
 }
 function nextCardL() {
-    console.log(bestSongsIndex);
-    if (bestSongsIndex != 0) {
+    if (bestSongsIndex === 1) {
+        document.getElementById('left').classList.add('hidden');
         document.getElementById(bestSongs[bestSongsIndex]).classList.add('left');
         setTimeout(() => {
             document.getElementById(bestSongs[bestSongsIndex]).classList.add('hidden');
@@ -170,9 +168,38 @@ function nextCardL() {
         }, 600
         )
     }
+    if (bestSongsIndex <= bestSongs.length - 1) {
+        document.getElementById('right').classList.remove('hidden');
+    }
+    if (bestSongsIndex != 1) {
+        document.getElementById('left').classList.remove('hidden');
+        document.getElementById(bestSongs[bestSongsIndex]).classList.add('left');
+        setTimeout(() => {
+            document.getElementById(bestSongs[bestSongsIndex]).classList.add('hidden');
+            document.getElementById(bestSongs[bestSongsIndex]).classList.remove('left');
+            document.getElementById(bestSongs[bestSongsIndex - 1]).classList.remove('hidden');
+            bestSongsIndex--;
+        }, 600
+        )
+    } 
 }
 function nextCardR() {
-    if (bestSongsIndex != bestSongs.length - 1) {
+    if (bestSongsIndex >= 0) {
+        document.getElementById('left').classList.remove('hidden');
+    }
+    if (bestSongsIndex === bestSongs.length - 2) {
+        document.getElementById('right').classList.add('hidden');
+        document.getElementById(bestSongs[bestSongsIndex]).classList.add('right');
+        setTimeout(() => {
+            document.getElementById(bestSongs[bestSongsIndex]).classList.add('hidden');
+            document.getElementById(bestSongs[bestSongsIndex]).classList.remove('right');
+            document.getElementById(bestSongs[bestSongsIndex + 1]).classList.remove('hidden');
+            bestSongsIndex++;
+        }, 600
+        )
+    }
+    if (bestSongsIndex != bestSongs.length - 2) {
+        document.getElementById('right').classList.remove('hidden');
         document.getElementById(bestSongs[bestSongsIndex]).classList.add('right');
         setTimeout(() => {
             document.getElementById(bestSongs[bestSongsIndex]).classList.add('hidden');

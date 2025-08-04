@@ -10,8 +10,7 @@ body {
     position: absolute;
     width: 500px;
     height: 250px;
-    top: 1px;
-    left: 590px;
+    left: 41%;
 }
 .logo img {
     width: 50%;
@@ -35,8 +34,8 @@ body {
     position: absolute;
     width: 500px;
     height: 350px;
-    top: 220px;
-    right: 95px;
+    top: 25vh;
+    right: 7%;
 }
 .button-container button {
     width: 100%;
@@ -59,8 +58,8 @@ body {
     position: absolute;
     width: 500px;
     height: 350px;
-    top: 210px;
-    left: 110px;
+    top: 25vh;
+    left: 7%;
 }
 .button-container-left button {
     width: 100%;
@@ -96,10 +95,13 @@ body {
 .playButton {
     background-color: none;
     position: absolute;
-    top: 505px;
-    left: 645px;
-    width: 150px;
-    height: 150px;
+    position: absolute;
+    top: 64vh;   /* Push it down 60% of screen height */
+    left: 50.3%;   /* Center horizontally */
+    transform: translateX(-50%);  /* Adjust back to true center */
+    
+    width: 12vw;     /* Responsive width */
+    height: 12vw;    /* Keep aspect ratio square */
 }
 .playButton button {
     background: none;
