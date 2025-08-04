@@ -96,12 +96,11 @@ body {
     background-color: none;
     position: absolute;
     position: absolute;
-    top: 64vh;   /* Push it down 60% of screen height */
-    left: 50.3%;   /* Center horizontally */
-    transform: translateX(-50%);  /* Adjust back to true center */
-    
-    width: 12vw;     /* Responsive width */
-    height: 12vw;    /* Keep aspect ratio square */
+    top: 64vh;   
+    left: 50.3%;
+    transform: translateX(-50%);
+    width: 12vw; 
+    height: 12vw;
 }
 .playButton button {
     background: none;
