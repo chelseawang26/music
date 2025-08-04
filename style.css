@@ -95,8 +95,7 @@ body {
 .playButton {
     background-color: none;
     position: absolute;
-    position: absolute;
-    top: 64vh;   
+    top: 69vh;   
     left: 50.3%;
     transform: translateX(-50%);
     width: 12vw; 
@@ -118,4 +117,5 @@ body {
 .hidden {
     display: none;
 }
+
 
